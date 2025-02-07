@@ -1,0 +1,967 @@
+@media screen and (min-width: 500px) {
+    /* カレンダーの基本スタイル */
+    .calendar-wrap {
+        margin: auto;
+        text-align: center;
+        /*font-family: Arial, sans-serif;*/
+        /*margin-top: 75px;*/
+    }
+
+    .calendar-wrap .calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /*margin-bottom: 30px;*/
+    }
+
+    .calendar-wrap .calendar-header .selectbox {
+        display: flex;
+    }
+
+    .calendar-wrap .calendar-header select {
+        margin-right: 10px;
+        padding: 5px;
+        border-radius: 15px;
+    }
+
+    .calendar-wrap .calendar-header button {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .calendar-wrap .ym button{
+        background-color: white;
+        border: none;
+    }
+
+    .calendar-wrap table.calendar {
+        border-collapse: collapse;
+        width: 40%;
+        margin: 0 auto 10px;
+    }
+
+    .calendar-wrap .calendar th, .calendar-wrap .calendar td {
+        border: 1px solid #ddd;
+        /*padding: 10px;*/
+        text-align: center;
+    }
+
+    .calendar-wrap .calendar th {
+        /*background-color: #f2f2f2;*/
+    }
+
+    .calendar-wrap .calendar td {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+    }
+
+    .calendar-wrap .calendar td.empty {
+        background-color: #f9f9f9;
+    }
+
+    .calendar-wrap .calendar td.today .day {
+        background-color: lightgreen;
+        font-weight: bold;
+        color: white;  /* 文字色を白にする */
+    }
+
+    /* 曜日の色 */
+    .calendar-wrap th.sun, td.sun .day{
+        color: red;
+    }
+
+    .calendar-wrap th.sat, td.sat .day{
+        color: blue;
+    }
+
+    /* その他のスタイル */
+    .calendar-wrap h1, .calendar-wrap h2 {
+        margin: 0 0 10px;
+        text-align: center;
+    }
+
+    .calendar-wrap h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .calendar-wrap .calendar a {
+        display: block; /* <td>全体をクリック可能にする */
+        text-decoration: none; /* リンクの下線を消す */
+        height: 100%; /* クリック領域を<td>全体にする */
+        width: 100%;
+        text-align: center;
+    }
+
+    .calendar .day {
+        margin: 0;
+        padding: 0 1px 2px;
+        width: 20%;
+        height: 12px;
+        font-size: 10px;  /* 文字サイズを調整 */
+        text-align: center;  /* 水平方向の中央揃え */
+        border-radius: 5px;  /* 角を丸くする */
+        vertical-align: center;
+        color: #333;
+    }
+
+    .calendar-wrap .name {
+        margin-left: 10px;
+    }
+
+    .calendar-wrap .blue{
+        margin: 0;
+        padding-right: 2px;
+        color: #8888ff;
+        background-color: #fff;
+        font-size: 10px;
+        text-align: right;
+    }
+    .calendar-wrap .red{
+        margin: 0;
+        padding-right: 2px;
+        padding-bottom: 2px;
+        color: #ff8888;
+        background-color: #fff;
+        font-size: 10px;
+        text-align: right;
+    }
+    .calendar-wrap .td-head{
+        display: flex;
+    }
+    .calendar-wrap .garbage{
+        color: #888;
+        width: 80%;
+        text-align: right;
+        margin: 0;
+        padding: 0 2px;
+        font-size: 10px;
+    }
+
+
+
+
+
+    /*収入、支出、差額*/
+    .syuusi{
+        width: 50%;
+        display: flex;
+        margin: auto;
+    }
+    .syuusi div{
+        width: 33%;
+    }
+    .syuusi div h4, .syuusi div p{
+        margin: 5px;
+    }
+
+
+
+
+    /* グラフ、ゴミの日ボタン */
+    .gg{
+        position: fixed;
+        bottom: 100px;
+        right: 1vw;
+        display: flex;
+    }
+
+    .gg a{
+        display: inline-block;
+        width: 60px;
+        /* height: 60px; */
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        /* border: solid 1px #000; */
+        border-radius: 30px;
+        background-color: #6d6;
+        text-align: center;
+    }
+
+    .gg i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 28px;
+        color: white;
+    }
+
+    .gg p{
+        text-align: center;
+        margin: 0;
+    }
+
+
+
+
+    /* メニューバー */
+    #sp-fixed-menu {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0;
+        font-size: 0;
+        opacity: 0.9;
+        z-index: 99;
+    }
+
+    #sp-fixed-menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 10vh; /* 高さを画面サイズに応じて調整 */
+    }
+
+    #sp-fixed-menu li {
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        background: #6a6;
+    }
+
+    #sp-fixed-menu li.active {
+        background: #4CAF50;
+        border-top: 3px solid #fff;
+    }
+
+    #sp-fixed-menu li a {
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s ease;
+    }
+
+    #sp-fixed-menu li a:hover {
+        background: #5c5;
+        color: #000;
+    }
+
+    #sp-fixed-menu li a:focus {
+        outline: none;
+        box-shadow: 0 0 5px #fff;
+    }
+
+    #sp-fixed-menu li a p {
+        margin: 10px;
+    }
+
+    #sp-fixed-menu li a i {
+        margin-top: 10px;
+        font-size: 18px; /* アイコンサイズを微調整 */
+    }
+
+
+
+
+
+    /*kakeibo.jsp*/
+    /*戻るボタン*/
+    .kakeibo{
+        margin: 8px;
+    }
+    .body{
+        /*margin-top: 10vh;*/
+    }
+
+    .back{
+        /*padding-top: 5px;*/
+        /*padding-bottom: 5px;*/
+        /*width: 30px;*/
+        text-align: left;
+        /*margin-left: 10%;*/
+        background-color: #fff;
+        border: none;
+    }
+    .back i{
+        font-size: 30px;
+    }
+    .kakeibo #dateForm{
+        text-align: center;
+        /*margin: 50px;*/
+    }
+    .kakeibo #dateForm button{
+        background-color: #fff;
+        border: none;
+    }
+
+    .ss{
+        margin: auto;
+        height: 75vh;
+        overflow-y: auto;
+    }
+
+    .ss h2{
+        width: 40%;
+        margin: 30px auto 10px auto;
+        font-size: 20px;
+        color: #555;
+    }
+
+    .ss table{
+        width: 40%;
+        margin: auto;
+        border: solid 1px #888;
+        border-collapse: collapse;
+    }
+
+    .ss .income td{
+        background-color: #e1f5fe;
+    }
+
+    .ss .expense td{
+        background-color: #ffebee;
+    }
+
+    .ss th{
+        border: solid 1px #888;
+        padding: 1px 5px;
+    }
+
+    .ss td{
+        border: solid 1px #888;
+        padding: 5px;
+    }
+
+    .ss .category{
+        width: 21%;
+    }
+
+    .ss .title{
+        width: 36%;
+    }
+
+    .ss .money{
+        width: 27%;
+    }
+
+    .ss .delete{
+        width: 7%;
+        border: none;
+    }
+
+    .ss form{
+        text-align: center;
+    }
+
+    .ss .income button{
+        background-color: #e1f5fe;
+        border: none;
+    }
+
+    .ss .expense button{
+        background-color: #ffebee;
+        border: none;
+    }
+
+    .ss p{
+        margin: 0;
+        text-align: center;
+    }
+
+    .ss .edit-link{
+        text-decoration: none;
+        /*color: #551a8b;*/
+    }
+
+    /* 追加ボタン */
+    .p{
+        position: fixed;
+        bottom: 100px;
+        right: 1vw;
+        display: flex;
+    }
+
+    .p a{
+        /*margin: 10px;*/
+        /*padding: 15px;*/
+        /*border-radius: 30px;*/
+        /*background-color: #6d6;*/
+        display: inline-block;
+        width: 60px;
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 30px;
+        background-color: #6d6;
+        text-align: center;
+    }
+
+    .p i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 28px;
+        color: #fff;
+    }
+
+    .p p{
+        text-align: center;
+        margin: 0;
+    }
+
+
+    /* モーダル全体のスタイル */
+    .modal {
+        display: none; /* 初期状態は非表示 */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4); /* 背景を半透明にする */
+    }
+
+    /* モーダルコンテンツ */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-content label{
+        display: inline-block;
+        width: 8vw;
+    }
+
+    .modal-content h2{
+        color: #555;
+    }
+
+    .modal-content input, .modal-content select{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+        border: solid 1px #555;
+        border-radius: 3px;
+    }
+
+    .modal-content .kakeibo-submit{
+        text-align: center;
+    }
+
+    .modal-content button{
+        width: 160px;
+        margin: 10% auto;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #66aa66;
+        color: white;
+    }
+
+    .modal-content button :hover{
+        opacity: 0.9;
+    }
+
+    /* 閉じるボタン */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 499px) {
+    /* カレンダーの基本スタイル */
+    .calendar-wrap {
+        margin: auto;
+        text-align: center;
+        /*font-family: Arial, sans-serif;*/
+        margin-top: 75px;
+    }
+
+    .calendar-wrap .calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .calendar-wrap .calendar-header .selectbox {
+        display: flex;
+    }
+
+    .calendar-wrap .calendar-header select {
+        margin-right: 10px;
+        padding: 5px;
+        border-radius: 15px;
+    }
+
+    .calendar-wrap .calendar-header button {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .calendar-wrap .ym button{
+        background-color: white;
+        border: none;
+    }
+
+    .calendar-wrap table.calendar {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .calendar-wrap .calendar th, .calendar-wrap .calendar td {
+        border: 1px solid #ddd;
+        /*padding: 10px;*/
+        text-align: center;
+    }
+
+    .calendar-wrap .calendar th {
+        /*background-color: #f2f2f2;*/
+    }
+
+    .calendar-wrap .calendar td {
+        width: 50px;
+        height: 60px;
+        padding: 0;
+    }
+
+    .calendar-wrap .calendar td.empty {
+        background-color: #f9f9f9;
+    }
+
+    .calendar-wrap .calendar td.today .day {
+        background-color: lightgreen;
+        font-weight: bold;
+        color: white;  /* 文字色を白にする */
+    }
+
+    /* 曜日の色 */
+    .calendar-wrap th.sun, td.sun .day{
+        color: red;
+    }
+
+    .calendar-wrap th.sat, td.sat .day{
+        color: blue;
+    }
+
+    /* その他のスタイル */
+    .calendar-wrap h1, .calendar-wrap h2 {
+        margin: 0 0 10px;
+        text-align: center;
+    }
+
+    .calendar-wrap h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .calendar-wrap .calendar a {
+        display: block; /* <td>全体をクリック可能にする */
+        text-decoration: none; /* リンクの下線を消す */
+        height: 100%; /* クリック領域を<td>全体にする */
+        width: 100%;
+        text-align: center;
+    }
+
+    .calendar .day {
+        margin: 0;
+        padding: 3px;
+        padding-top: 0;
+        width: 10px;
+        height: 10px;
+        font-size: 10px;  /* 文字サイズを調整 */
+        text-align: center;  /* 水平方向の中央揃え */
+        border-radius: 5px;  /* 角を丸くする */
+        vertical-align: center;
+        color: #333;
+    }
+
+    .calendar-wrap .name {
+        margin-left: 10px;
+    }
+
+    .calendar-wrap .blue{
+        margin: 0;
+        padding-right: 3px;
+        color: #8888ff;
+        background-color: #fff;
+        font-size: 12px;
+        text-align: right;
+    }
+    .calendar-wrap .red{
+        margin: 0;
+        padding-right: 3px;
+        color: #ff8888;
+        background-color: #fff;
+        font-size: 12px;
+        text-align: right;
+    }
+    .calendar-wrap .td-head{
+        display: flex;
+        margin-bottom: 1px;
+    }
+    .calendar-wrap .garbage{
+        color: #888;
+        width: 80%;
+        text-align: right;
+        margin: 0;
+        /*padding: 3px;*/
+        font-size: 10px;
+    }
+
+
+
+
+
+    /*収入、支出、差額*/
+    .syuusi{
+        display: flex;
+        margin: 15px;
+    }
+    .syuusi div{
+        width: 33%;
+    }
+    .syuusi div h4, .syuusi div p{
+        margin: 5px;
+    }
+
+
+
+
+    /* グラフ、ゴミの日ボタン */
+    .gg{
+        position: fixed;
+        bottom: 100px;
+        right: 10px;
+        display: flex;
+    }
+
+    .gg a{
+        display: inline-block;
+        width: 60px;
+        /* height: 60px; */
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        /* border: solid 1px #000; */
+        border-radius: 30px;
+        background-color: #6d6;
+        text-align: center;
+    }
+
+    .gg i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 28px;
+        color: white;
+    }
+
+    .gg p{
+        text-align: center;
+        margin: 0;
+    }
+
+
+
+
+    /* メニューバー */
+    #sp-fixed-menu {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0;
+        font-size: 0;
+        opacity: 0.9;
+        z-index: 99;
+    }
+
+    #sp-fixed-menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 10vh; /* 高さを画面サイズに応じて調整 */
+    }
+
+    #sp-fixed-menu li {
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        background: #6a6;
+    }
+
+    #sp-fixed-menu li.active {
+        background: #4CAF50;
+        border-top: 3px solid #fff;
+    }
+
+    #sp-fixed-menu li a {
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s ease;
+    }
+
+    #sp-fixed-menu li a:hover {
+        background: #5c5;
+        color: #000;
+    }
+
+    #sp-fixed-menu li a:focus {
+        outline: none;
+        box-shadow: 0 0 5px #fff;
+    }
+
+    #sp-fixed-menu li a p {
+        margin: 10px;
+    }
+
+    #sp-fixed-menu li a i {
+        margin-top: 10px;
+        font-size: 18px; /* アイコンサイズを微調整 */
+    }
+
+
+
+
+
+    /*kakeibo.jsp*/
+    /*戻るボタン*/
+    .kakeibo{
+        margin: 8px;
+    }
+    .body{
+        margin-top: 10vh;
+    }
+
+    .back{
+        /*padding-top: 5px;*/
+        /*padding-bottom: 5px;*/
+        /*width: 30px;*/
+        text-align: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #fff;
+        border: none;
+    }
+    .back i{
+        font-size: 30px;
+    }
+    .kakeibo #dateForm{
+        text-align: center;
+        margin: 50px;
+    }
+    .kakeibo #dateForm button{
+        background-color: #fff;
+        border: none;
+    }
+
+    .ss{
+        margin: 0 10px;
+    }
+
+    .ss h2{
+        margin: 30px auto 10px auto;
+        font-size: 20px;
+        color: #555;
+    }
+
+    .ss table{
+        width: 100%;
+        border: solid 1px #666;
+        border-collapse: collapse;
+    }
+
+    .ss th{
+        border: solid 1px #666;
+        padding: 1px 5px;
+    }
+
+    .ss td{
+        border: solid 1px #666;
+        padding: 5px;
+    }
+
+    .ss .category{
+        width: 21%;
+    }
+
+    .ss .title{
+        width: 36%;
+    }
+
+    .ss .money{
+        width: 27%;
+    }
+
+    .ss .delete{
+        width: 10%;
+        border: none;
+    }
+
+    .ss form{
+        text-align: center;
+    }
+
+    .ss button{
+        background-color: white;
+        border: none;
+    }
+
+    .ss p{
+        margin: 0;
+        text-align: center;
+    }
+
+    .ss .edit-link{
+        text-decoration: none;
+        color: #551a8b;
+    }
+
+    /* 追加ボタン */
+    .p{
+        position: fixed;
+        bottom: 100px;
+        right: 10px;
+        display: flex;
+    }
+
+    .p a{
+        /*margin: 10px;*/
+        /*padding: 15px;*/
+        /*border-radius: 30px;*/
+        /*background-color: #6d6;*/
+        display: inline-block;
+        width: 60px;
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 30px;
+        background-color: #6d6;
+        text-align: center;
+    }
+
+    .p i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 28px;
+        color: #fff;
+    }
+
+    .p p{
+        text-align: center;
+        margin: 0;
+    }
+
+
+    /* モーダル全体のスタイル */
+    .modal {
+        display: none; /* 初期状態は非表示 */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4); /* 背景を半透明にする */
+    }
+
+    /* モーダルコンテンツ */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 50% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-content label{
+        display: inline-block;
+        width: 20vw;
+    }
+
+    .modal-content h2{
+        color: #555;
+    }
+
+    .modal-content input, .modal-content select{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+        border: solid 1px #555;
+        border-radius: 3px;
+    }
+
+    .modal-content .kakeibo-submit{
+        text-align: center;
+    }
+
+    .modal-content button{
+        width: 48%;
+        margin: 10% auto;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #66aa66;
+        color: white;
+    }
+
+    .modal-content button :hover{
+        opacity: 0.9;
+    }
+
+    /* 閉じるボタン */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+    }
+}

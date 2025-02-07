@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/error.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/kakeibo/Calendar.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/kakeibo" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/kakeibo/Kakeibo.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/kakeibo" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/kakeibo/a.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/kakeibo" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/memo/List.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/memo" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recipe/Add.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recipe" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recipe/Favorite.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recipe" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recipe/List.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recipe" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recipe/Register.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recipe" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/setting/Expenseture.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/setting" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/setting/Schedule.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/setting" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/setting/Setting.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/setting" />
+      </map>
+    </option>
+  </component>
+</project>

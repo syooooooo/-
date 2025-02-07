@@ -1,0 +1,830 @@
+@media screen and (min-width: 500px) {
+    .body{
+        /*margin-top: 75px;*/
+    }
+
+    .link{
+        text-align: right;
+    }
+
+    .link a{
+        margin-left: 10px;
+    }
+
+    .h1{
+        text-align: center;
+    }
+
+    .h1 h1{
+        /*margin-top: 100px;*/
+    }
+
+
+
+
+    /* 設定 */
+    .list{
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .list a{
+        text-decoration: none;
+        border: solid 1px #000;
+        margin: 15px auto;
+        padding: 10px 20px;
+        width: 30%;
+        color: #000;
+        background-color: #efe;
+    }
+
+    .list .logout{
+        background-color: #fee;
+    }
+
+
+
+
+
+    /* メニューバー */
+    #sp-fixed-menu {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0;
+        font-size: 0;
+        opacity: 0.9;
+        z-index: 99;
+    }
+
+    #sp-fixed-menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 10vh; /* 高さを画面サイズに応じて調整 */
+    }
+
+    #sp-fixed-menu li {
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        background: #6a6;
+    }
+
+    #sp-fixed-menu li.active {
+        background: #4CAF50;
+        border-top: 3px solid #fff;
+    }
+
+    #sp-fixed-menu li a {
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s ease;
+    }
+
+    #sp-fixed-menu li a:hover {
+        background: #5c5;
+        color: #000;
+    }
+
+    #sp-fixed-menu li a:focus {
+        outline: none;
+        box-shadow: 0 0 5px #fff;
+    }
+
+    #sp-fixed-menu li a p {
+        margin: 10px;
+    }
+
+    #sp-fixed-menu li a i {
+        margin-top: 10px;
+        font-size: 18px; /* アイコンサイズを微調整 */
+    }
+
+
+
+
+    /* 削除、追加ボタン */
+    .p{
+        position: fixed;
+        bottom: 100px;
+        right: 1vw;
+        display: flex;
+    }
+
+    .p a{
+        /*margin: 10px;*/
+        /*padding: 15px;*/
+        /*border-radius: 30px;*/
+        /*background-color: #6d6;*/
+        display: inline-block;
+        width: 60px;
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 30px;
+        background-color: #6d6;
+        text-align: center;
+    }
+
+    .p i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 28px;
+        color: #fff;
+    }
+
+    .p p{
+        text-align: center;
+        margin: 0;
+    }
+
+
+
+
+    /*Expenseture.jsp*/
+    /* フォームの全体設定 */
+    /*戻るボタン*/
+    .ture .head {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .ture .back {
+        width: 30px;
+        height: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10px;
+        margin-right: 20px;
+        padding: 1px 6px;
+        background-color: #fff;
+        border: none;
+        align-self: center;
+    }
+
+    .ture .back i {
+        font-size: 30px;
+    }
+
+    .ture h2 {
+        width: 295%;
+        height: 30px;
+        margin: 0;
+        align-self: center;
+        /*padding-top: 5px;*/
+        /*padding-bottom: 5px;*/
+        /*font-size: 20px;*/
+        font-weight: bold;
+        line-height: unset;
+        color: #555555;
+    }
+
+    .ture .form-container form {
+        width: 90%;
+        max-width: 400px;
+        margin: auto; /* 中央寄せ */
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 入力フィールドの共通スタイル */
+    .ture input[type="text"],
+    .ture input[type="number"],
+    .ture select {
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .ture input[type="text"]{
+        width: 48%;
+        margin-right: 2%;
+    }
+
+    .ture input[type="date"]{
+        margin-left: 2%;
+        width: 30%;
+    }
+
+    .ture input[type="number"], .ture select{
+        width: 38%;
+    }
+
+    .ture input[type="number"]{
+        margin-right: 2%;
+    }
+
+    .ture .td{
+        display: flex;
+    }
+
+    .ture .ag{
+        display: flex;
+    }
+
+    /* フォームの入力フィールドのフォーカス時のスタイル */
+    .ture input[type="text"]:focus,
+    .ture input[type="date"]:focus,
+    .ture input[type="number"]:focus,
+    .ture select:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+
+    /* プレースホルダーのスタイル */
+    .ture input::placeholder {
+        color: #aaa;
+    }
+
+    /* ボタンのスタイル */
+    .ture .form-container button {
+        width: 18%;
+        height: 28px;
+        margin-left: 2%;
+        padding: 5px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #66aa66;
+        color: white;
+        align-self: center;
+    }
+
+    .ture .b{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /* ボタンのホバー時のスタイル */
+    .ture button:hover {
+        background-color: #45a049;
+    }
+
+    /* ラベルのスタイル */
+    .ture label {
+        font-size: 14px;
+        color: #333;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .ture .scroll-container{
+        margin: auto;
+        /*margin: 5px 10px;*/
+        padding-bottom: 10px;
+        height: 60vh;
+        overflow-y: auto;
+    }
+    .ture h3{
+        width: 40%;
+        margin: 20px auto 0;
+        margin-bottom: 0;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: unset;
+        color: #555555;
+    }
+    .ture table{
+        width: 40%;
+        margin: auto;
+        border: solid 1px #888;
+        border-collapse: collapse;
+    }
+    .ture th{
+        border: solid 1px #888;
+        padding: 1px 5px;
+    }
+    .ture td{
+        border: solid 1px #888;
+        padding: 5px;
+    }
+    .ture td button{
+        background-color: #fff;
+        border: none;
+    }
+    .ture .g{
+        width: 21%
+    }
+    .ture .t{
+        width: 36%
+    }
+    .ture .a{
+        width: 27%
+    }
+    .ture .d{
+        width: 7%
+    }
+
+
+
+
+    /*Money.jsp*/
+    /*戻るボタン*/
+    .money .head {
+        display: flex;
+        /*margin-bottom: 40%;*/
+    }
+
+    .money .back {
+        width: 30px;
+        height: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10px;
+        margin-right: 20px;
+        padding: 1px 6px;
+        background-color: #fff;
+        border: none;
+        align-self: center;
+    }
+
+    .money .back i {
+        font-size: 30px;
+    }
+
+    .money h2 {
+        width: 295%;
+        height: 30px;
+        margin: 0;
+        align-self: center;
+        /*padding-top: 5px;*/
+        /*padding-bottom: 5px;*/
+        /*font-size: 20px;*/
+        font-weight: bold;
+        line-height: unset;
+        color: #555555;
+    }
+
+    .money p{
+        margin: 5%;
+         text-align: center;
+    }
+
+    .money .goal-display{
+        margin: 2%;
+        text-align: center;
+    }
+
+    .money .input-group{
+        text-align: center;
+        margin: 2% auto;
+    }
+
+    .money input{
+        margin-bottom: 10px;
+        padding: 10px;
+        /* height: 25px; */
+        border: solid 1px #ccc;
+        border-radius: 5px;
+    }
+
+    .money .button{
+        text-align: center;
+        margin: 5% auto;
+    }
+
+    .money .button button{
+        color: white;
+        background-color: #6a6;
+        border: none;
+        width: 160px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 499px) {
+    .body{
+        margin-top: 75px;
+    }
+
+    .link{
+        text-align: right;
+    }
+
+    .link a{
+        margin-left: 10px;
+    }
+
+    .h1{
+        text-align: center;
+    }
+
+    .h1 h1{
+        margin-top: 100px;
+    }
+
+
+
+
+    /* 設定 */
+    .list{
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        margin-top: 75px;
+    }
+
+    .list a{
+        text-decoration: none;
+        border: solid 1px #000;
+        margin: 15px auto;
+        padding: 10px 20px;
+        width: 60%;
+        color: #000;
+        background-color: #efe;
+    }
+
+    .list .logout{
+        background-color: #fee;
+    }
+
+
+
+
+
+    /* メニューバー */
+    #sp-fixed-menu {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0;
+        font-size: 0;
+        opacity: 0.9;
+        z-index: 99;
+    }
+
+    #sp-fixed-menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 10vh; /* 高さを画面サイズに応じて調整 */
+    }
+
+    #sp-fixed-menu li {
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        background: #6a6;
+    }
+
+    #sp-fixed-menu li.active {
+        background: #4CAF50;
+        border-top: 3px solid #fff;
+    }
+
+    #sp-fixed-menu li a {
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s ease;
+    }
+
+    #sp-fixed-menu li a:hover {
+        background: #5c5;
+        color: #000;
+    }
+
+    #sp-fixed-menu li a:focus {
+        outline: none;
+        box-shadow: 0 0 5px #fff;
+    }
+
+    #sp-fixed-menu li a p {
+        margin: 10px;
+    }
+
+    #sp-fixed-menu li a i {
+        margin-top: 10px;
+        font-size: 18px; /* アイコンサイズを微調整 */
+    }
+
+
+
+
+    /* 削除、追加ボタン */
+    .p{
+        position: fixed;
+        bottom: 100px;
+        right: 10px;
+        display: flex;
+    }
+
+    .p a{
+        /*margin: 10px;*/
+        /*padding: 15px;*/
+        /*border-radius: 30px;*/
+        /*background-color: #6d6;*/
+        display: inline-block;
+        width: 60px;
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 30px;
+        background-color: #6d6;
+        text-align: center;
+    }
+
+    .p i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 28px;
+        color: #fff;
+    }
+
+    .p p{
+        text-align: center;
+        margin: 0;
+    }
+
+
+
+
+    /*Expenseture.jsp*/
+    /* フォームの全体設定 */
+    /*戻るボタン*/
+    .ture .head {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .ture .back {
+        width: 30px;
+        height: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10px;
+        margin-right: 20px;
+        padding: 1px 6px;
+        background-color: #fff;
+        border: none;
+        align-self: center;
+    }
+
+    .ture .back i {
+        font-size: 30px;
+    }
+
+    .ture h2 {
+        width: 295%;
+        height: 30px;
+        margin: 0;
+        align-self: center;
+        /*padding-top: 5px;*/
+        /*padding-bottom: 5px;*/
+        /*font-size: 20px;*/
+        font-weight: bold;
+        line-height: unset;
+        color: #555555;
+    }
+
+    .ture .form-container form {
+        width: 90%;
+        max-width: 400px;
+        margin: auto; /* 中央寄せ */
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 入力フィールドの共通スタイル */
+    .ture input[type="text"],
+    .ture input[type="number"],
+    .ture select {
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .ture input[type="text"]{
+        width: 65%;
+    }
+
+    .ture input[type="date"]{
+        margin-left: 2%;
+        width: 30%;
+    }
+
+    .ture input[type="number"], .ture select{
+        width: 38%;
+    }
+
+    .ture input[type="number"]{
+        margin-right: 2%;
+    }
+
+    .ture .td{
+        display: flex;
+    }
+
+    .ture .ag{
+        display: flex;
+    }
+
+    /* フォームの入力フィールドのフォーカス時のスタイル */
+    .ture input[type="text"]:focus,
+    .ture input[type="date"]:focus,
+    .ture input[type="number"]:focus,
+    .ture select:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+
+    /* プレースホルダーのスタイル */
+    .ture input::placeholder {
+        color: #aaa;
+    }
+
+    /* ボタンのスタイル */
+    .ture .form-container button {
+        width: 18%;
+        height: 28px;
+        margin-left: 2%;
+        padding: 3px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #66aa66;
+        color: white;
+        align-self: center;
+    }
+
+    .ture .b{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /* ボタンのホバー時のスタイル */
+    .ture button:hover {
+        background-color: #45a049;
+    }
+
+    /* ラベルのスタイル */
+    .ture label {
+        font-size: 14px;
+        color: #333;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .ture .scroll-container{
+        margin: 5px 10px;
+        padding-bottom: 10px;
+        height: 57vh;
+        overflow-y: auto;
+    }
+    .ture h3{
+        margin-bottom: 0;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: unset;
+        color: #555555;
+    }
+    .ture table{
+        width: 100%;
+        border: solid 1px #666;
+        border-collapse: collapse;
+    }
+    .ture th{
+        border: solid 1px #666;
+        padding: 1px 5px;
+    }
+    .ture td{
+        border: solid 1px #666;
+        padding: 5px;
+    }
+    .ture td button{
+        background-color: #fff;
+        border: none;
+    }
+    .ture .g{
+        width: 21%
+    }
+    .ture .t{
+        width: 36%
+    }
+    .ture .a{
+        width: 27%
+    }
+    .ture .d{
+        width: 10%
+    }
+
+
+
+    /*Money.jsp*/
+    /*戻るボタン*/
+    .money .head {
+        display: flex;
+        margin-bottom: 40%;
+    }
+
+    .money .back {
+        width: 30px;
+        height: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10px;
+        margin-right: 20px;
+        padding: 1px 6px;
+        background-color: #fff;
+        border: none;
+        align-self: center;
+    }
+
+    .money .back i {
+        font-size: 30px;
+    }
+
+    .money h2 {
+        width: 295%;
+        height: 30px;
+        margin: 0;
+        align-self: center;
+        /*padding-top: 5px;*/
+        /*padding-bottom: 5px;*/
+        /*font-size: 20px;*/
+        font-weight: bold;
+        line-height: unset;
+        color: #555555;
+    }
+
+    .money p{
+        margin: 5%;
+         text-align: center;
+    }
+
+    .money .goal-display{
+        margin: 5%;
+        text-align: center;
+    }
+
+    .money .input-group{
+        text-align: center;
+        margin: 20% auto;
+    }
+
+    .money input{
+        margin-bottom: 10px;
+        padding: 10px;
+        /* height: 25px; */
+        border: solid 1px #ccc;
+        border-radius: 5px;
+    }
+
+    .money .button{
+        text-align: center;
+        margin: 20% auto;
+    }
+
+    .money .button button{
+        color: white;
+        background-color: #6a6;
+        border: none;
+        width: 48%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+

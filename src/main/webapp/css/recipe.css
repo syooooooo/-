@@ -1,0 +1,1076 @@
+@media screen and (min-width: 500px) {
+    .body{
+        /*margin-top: 75px;*/
+        /*height: 80vh;*/
+        /*overflow-y: auto;*/
+    }
+
+    .head{
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .link{
+        text-align: right;
+    }
+
+    .link a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: #551a8b;
+    }
+
+    .h1{
+        text-align: center;
+    }
+
+    .h1 h1{
+        margin-top: 15vh;
+        margin-bottom: 10vh;
+    }
+
+    /*戻るボタン*/
+    .back{
+        /*padding-top: 5px;*/
+        /*padding-bottom: 5px;*/
+        width: 30px;
+        text-align: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #fff;
+        border: none;
+    }
+    .back i{
+        font-size: 30px;
+    }
+
+
+
+
+
+    .search-form-3 {
+        display: flex;
+        width: 50%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        border: 1px solid #888888;
+        border-radius: 25px;
+        /*margin-top: 40%;*/
+    }
+
+    .search-form-3 input {
+        width: 320px;
+        height: 45px;
+        padding: 5px 15px;
+        border: none;
+        box-sizing: border-box;
+        font-size: 1em;
+        outline: none;
+    }
+
+    .search-form-3 input::placeholder{
+        color: #888888;
+    }
+
+    .search-form-3 button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 45px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .search-form-3 button::after {
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z' fill='%23888888'%3E%3C/path%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        content: '';
+    }
+
+
+
+
+    /*お気に入りボタン*/
+    .registered i{
+        font-size: 20px;
+        color: #88ff88;
+        cursor: pointer;
+    }
+    .unregistered i{
+        font-size: 20px;
+        color: #888;
+        cursor: pointer;
+    }
+    /*.favorite active i{*/
+    /*    font-size: 20px;*/
+    /*    color: #88ff88;*/
+    /*    cursor: pointer;*/
+    /*}*/
+    /*.favorite i{*/
+    /*    color: #888;*/
+    /*}*/
+
+
+
+
+    /* 削除、追加ボタン */
+    .pm{
+        position: fixed;
+        bottom: 100px;
+        right: 1vw;
+        display: flex;
+    }
+
+    .pm a{
+        /*margin: 10px;*/
+        /*padding: 15px;*/
+        /*border-radius: 30px;*/
+        /*background-color: #6d6;*/
+        display: inline-block;
+        width: 60px;
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 30px;
+        background-color: #6d6;
+        text-align: center;
+    }
+
+    .pm i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 28px;
+        color: white;
+    }
+
+    .pm p{
+        text-align: center;
+        margin: 0;
+    }
+
+
+
+
+    /* メニューバー */
+    #sp-fixed-menu {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        font-size: 0;
+        opacity: 0.9;
+        z-index: 99;
+    }
+
+    #sp-fixed-menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 10vh; /* 高さを画面サイズに応じて調整 */
+    }
+
+    #sp-fixed-menu li {
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        background: #6a6;
+    }
+
+    #sp-fixed-menu li.active {
+        background: #4CAF50;
+        border-top: 3px solid #fff;
+    }
+
+    #sp-fixed-menu li a {
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s ease;
+    }
+
+    #sp-fixed-menu li a:hover {
+        background: #5c5;
+        color: #000;
+    }
+
+    #sp-fixed-menu li a:focus {
+        outline: none;
+        box-shadow: 0 0 5px #fff;
+    }
+
+    #sp-fixed-menu li a p {
+        margin: 10px;
+    }
+
+    #sp-fixed-menu li a i {
+        margin-top: 10px;
+        font-size: 18px; /* アイコンサイズを微調整 */
+    }
+
+
+
+
+    /*Add.jsp*/
+    .add{
+        margin: 8px;
+    }
+    .add form {
+        width: 33%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        /*gap: 15px;*/
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .add label {
+        font-weight: bold;
+        margin: 0;
+    }
+    .add .file-placeholder{
+        font-weight: unset;
+    }
+    .add .form-group input, .add .form-group textarea, .add .form-group select, .add .form-group button {
+        width: 100%;
+        height: 6vh;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .add .file-upload .custom-file-input{
+        width: 85%;
+    }
+    .add .form-group textarea {
+        resize: vertical;
+    }
+    .add .form-group {
+        /*margin-top: 15px;*/
+        margin-bottom: 5px;
+    }
+    .add .buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .add .buttons button {
+        width: 160px;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .add .buttons .reset {
+        background-color: #aa6666;
+        color: white;
+    }
+    .add .buttons .submit {
+        background-color: #66aa66;
+        color: white;
+    }
+    .add .buttons button:hover {
+        opacity: 0.9;
+    }
+    .add input, .add textarea{
+        /*    width: 90%;*/
+    }
+    .add .head{
+        margin-bottom: 15px;
+    }
+    .add .head .back{
+        width: 30px;
+        /*height: 30px;*/
+        margin-left: 10px;
+        margin-right: 20px;
+        background-color: #fff;
+        border: none;
+    }
+
+    .add .head .h2{
+        margin-right: 60px;
+        width: 100%;
+    }
+    .add .head h2{
+        text-align: center;
+        margin: 0 30%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: unset;
+        color: #555555;
+    }
+
+    .custom-file-upload {
+        position: relative;
+        width: 100%;
+    }
+
+    .file-placeholder {
+        display: block;
+        width: 100%;
+        height: 45px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        /*color: #888;*/
+        color: #6a6a6a;
+        background-color: #fff;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    /*.file-placeholder:hover {*/
+    /*    border-color: #80bdff;*/
+    /*    outline: 0;*/
+    /*    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);*/
+    /*}*/
+
+    input[type="file"] {
+        display: none; /* 完全に非表示にする */
+    }
+
+    /*.file-placeholder.selected {*/
+    /*    color: #495057;*/
+    /*}*/
+
+    .add #ingredients{
+        height: 10vh;
+    }
+    .add #instructions{
+        height: 14vh;
+    }
+
+
+
+
+
+
+
+
+
+    /*List.jsp*/
+    .list .results, .favorite .results, .delete .results, .searchresult .results{
+        padding: 15px;
+        height: 60vh;
+        overflow-y: auto;
+    }
+    .list .h2, .favorite .h2, .delete .h2, .searchresult .h2{
+        width: 40%;
+        margin: auto;
+    }
+    .list h2, .favorite h2, .delete h2, .searchresult h2{
+        /*margin-left:10px;*/
+        /*margin-bottom:10px;*/
+        font-size: 20px;
+        color: #555;
+    }
+    .list .recipe-card, .favorite .recipe-card, .delete .recipe-card, .searchresult .recipe-card{
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        width: 40%;
+        margin: auto;
+        margin-bottom: 30px;
+        padding: 20px 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+    }
+    .list .recipe-card img, .favorite .recipe-card img, .delete .recipe-card img, .searchresult .recipe-card img{
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-right: 10px;
+        border: 1px solid #ddd;
+    }
+    .list .recipe-details, .favorite .recipe-details, .delete .recipe-details, .searchresult .recipe-details{
+        flex-grow: 1;
+    }
+    .list .recipe-details h3, .favorite .recipe-details h3, .delete .recipe-details h3, .searchresult .recipe-details h3{
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+    }
+    .list .recipe-details p, .favorite .recipe-details p, .delete .recipe-details p, .searchresult .recipe-details p{
+        margin: 5px 0;
+        font-size: 12px;
+        color: #666;
+    }
+    .list .recipe-actions, .favorite .recipe-actions, .delete .recipe-actions, .searchresult .recipe-actions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .list .recipe-actions button, .favorite .recipe-actions button, .delete .recipe-actions button, .searchresult .recipe-actions button{
+        background-color: #fff;
+        border: none;
+    }
+
+    .list .link, .favorite .link, .delete .link, .searchresult .link{
+        width: 100%;
+        text-align: right;
+    }
+    .delete .fa-trash{
+        color: #000;
+    }
+
+
+
+
+
+    /*Detail.jsp*/
+    .detail .link{
+        width: 90%;
+        text-align: right;
+    }
+    .detail .recipe-detail{
+        margin-top: 50px;
+        height: 71vh;
+        overflow-y: auto;
+    }
+    .detail .recipe-card{
+        margin-top: 10px;
+    }
+    .detail .image{
+        margin: auto;
+        /*width: 90%;*/
+        /*height: 200px;*/
+        display: flex;
+    }
+    .detail .image img{
+        margin: auto;
+        width: 50%;
+        height: 60vh;
+        /*margin: 15px 10%;*/
+        border: solid 1px #ddd;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .detail button{
+        background-color: #fff;
+        border: none;
+    }
+    .detail .h3b{
+        display: flex;
+        margin: 0 25%;
+    }
+    .detail .h3b h1{
+        width: 90%;
+        /*text-align: center;*/
+        margin: 0;
+        color: #555555;
+    }
+    .detail .h3b form{
+        height: 100%;
+    }
+    .detail .h3b button{
+        width: 10%;
+        height: 100%;
+        margin-left: 10px;
+        padding: 0;
+        text-align: right;
+    }
+    .detail .ingredients, .detail .instructions{
+        text-align: center;
+        margin-top: 50px;
+        padding: 10px;
+        /*border: solid 1px #ccc;*/
+        /*border-radius: 5px;*/
+    }
+    .detail .ingredients .bold, .detail .instructions .bold{
+        font-weight: bold;
+        margin-top: 0;
+    }
+    .detail .contents{
+        width: 50%;
+        margin: auto;
+        text-align: left;
+        /*margin-left: 5%;*/
+        /*margin-right: 5%;*/
+        padding: 15px;
+        border: solid 1px #ccc;
+        border-radius: 5px;
+    }
+
+    /* 削除、追加ボタン */
+    .detail .p{
+        position: fixed;
+        bottom: 100px;
+        right: 1vw;
+        display: flex;
+    }
+
+    .detail .p a{
+        /*margin: 10px;*/
+        /*padding: 15px;*/
+        /*border-radius: 30px;*/
+        /*background-color: #6d6;*/
+        display: inline-block;
+        width: 60px;
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 30px;
+        background-color: #6d6;
+        text-align: center;
+    }
+
+    .detail .p i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 28px;
+        color: white;
+    }
+
+    .detail .p p{
+        text-align: center;
+        margin: 0;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 499px) {
+    .body{
+        margin-top: 75px;
+        height: 80vh;
+        /*overflow-y: auto;*/
+    }
+
+    .head{
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .link{
+        text-align: right;
+    }
+
+    .link a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: #551a8b;
+    }
+
+    .h1{
+        text-align: center;
+    }
+
+    .h1 h1{
+        margin-top: 100px;
+    }
+
+    /*戻るボタン*/
+    .back{
+        /*padding-top: 5px;*/
+        /*padding-bottom: 5px;*/
+        width: 30px;
+        text-align: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #fff;
+        border: none;
+    }
+    .back i{
+        font-size: 30px;
+    }
+
+
+
+
+
+    .search-form-3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        border: 1px solid #888888;
+        border-radius: 25px;
+        margin-top: 40%;
+    }
+
+    .search-form-3 input {
+        width: 320px;
+        height: 45px;
+        padding: 5px 15px;
+        border: none;
+        box-sizing: border-box;
+        font-size: 1em;
+        outline: none;
+    }
+
+    .search-form-3 input::placeholder{
+        color: #888888;
+    }
+
+    .search-form-3 button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 45px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .search-form-3 button::after {
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z' fill='%23888888'%3E%3C/path%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        content: '';
+    }
+
+
+
+
+    /*お気に入りボタン*/
+    .registered i{
+        font-size: 20px;
+        color: #88ff88;
+        cursor: pointer;
+    }
+    .unregistered i{
+        font-size: 20px;
+        color: #888;
+        cursor: pointer;
+    }
+    /*.favorite active i{*/
+    /*    font-size: 20px;*/
+    /*    color: #88ff88;*/
+    /*    cursor: pointer;*/
+    /*}*/
+    /*.favorite i{*/
+    /*    color: #888;*/
+    /*}*/
+
+
+
+
+    /* 削除、追加ボタン */
+    .pm{
+        position: fixed;
+        bottom: 100px;
+        right: 10px;
+        display: flex;
+    }
+
+    .pm a{
+        /*margin: 10px;*/
+        /*padding: 15px;*/
+        /*border-radius: 30px;*/
+        /*background-color: #6d6;*/
+        display: inline-block;
+        width: 60px;
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 30px;
+        background-color: #6d6;
+        text-align: center;
+    }
+
+    .pm i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 28px;
+        color: white;
+    }
+
+    .pm p{
+        text-align: center;
+        margin: 0;
+    }
+
+
+
+
+    /* メニューバー */
+    #sp-fixed-menu {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        font-size: 0;
+        opacity: 0.9;
+        z-index: 99;
+    }
+
+    #sp-fixed-menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 10vh; /* 高さを画面サイズに応じて調整 */
+    }
+
+    #sp-fixed-menu li {
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        background: #6a6;
+    }
+
+    #sp-fixed-menu li.active {
+        background: #4CAF50;
+        border-top: 3px solid #fff;
+    }
+
+    #sp-fixed-menu li a {
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s ease;
+    }
+
+    #sp-fixed-menu li a:hover {
+        background: #5c5;
+        color: #000;
+    }
+
+    #sp-fixed-menu li a:focus {
+        outline: none;
+        box-shadow: 0 0 5px #fff;
+    }
+
+    #sp-fixed-menu li a p {
+        margin: 10px;
+    }
+
+    #sp-fixed-menu li a i {
+        margin-top: 10px;
+        font-size: 18px; /* アイコンサイズを微調整 */
+    }
+
+
+
+
+    /*Add.jsp*/
+    .add{
+        margin: 8px;
+    }
+    .add form {
+        display: flex;
+        flex-direction: column;
+        /*gap: 15px;*/
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .add label {
+        font-weight: bold;
+    }
+    .add .file-placeholder{
+        font-weight: unset;
+    }
+    .add .form-group input, .add .form-group textarea, .add .form-group select, .add .form-group button {
+        width: 100%;
+        height: 6vh;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .add .file-upload .custom-file-input{
+        width: 85%;
+    }
+    .add .form-group textarea {
+        resize: vertical;
+    }
+    .add .form-group {
+        /*margin-top: 15px;*/
+        /*margin-bottom: 15px;*/
+    }
+    .add .buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .add .buttons button {
+        width: 48%;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .add .buttons .reset {
+        background-color: #aa6666;
+        color: white;
+    }
+    .add .buttons .submit {
+        background-color: #66aa66;
+        color: white;
+    }
+    .add .buttons button:hover {
+        opacity: 0.9;
+    }
+    .add input, .add textarea{
+        /*    width: 90%;*/
+    }
+    .add .head .back{
+        width: 30px;
+        /*height: 30px;*/
+        margin-left: 10px;
+        margin-right: 20px;
+        background-color: #fff;
+        border: none;
+    }
+
+    .add .head h2{
+        margin: 0;
+        /*padding-top: 5px;*/
+        /*padding-bottom: 5px;*/
+        font-size: 20px;
+        font-weight: bold;
+        line-height: unset;
+        color: #555555;
+    }
+
+    .custom-file-upload {
+        position: relative;
+        width: 100%;
+    }
+
+    .file-placeholder {
+        display: block;
+        width: 100%;
+        height: 45px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        /*color: #888;*/
+        color: #6a6a6a;
+        background-color: #fff;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    /*.file-placeholder:hover {*/
+    /*    border-color: #80bdff;*/
+    /*    outline: 0;*/
+    /*    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);*/
+    /*}*/
+
+    input[type="file"] {
+        display: none; /* 完全に非表示にする */
+    }
+
+    /*.file-placeholder.selected {*/
+    /*    color: #495057;*/
+    /*}*/
+
+    .add #ingredients{
+        height: 10vh;
+    }
+    .add #instructions{
+        height: 14vh;
+    }
+
+
+
+
+
+
+
+
+
+    /*List.jsp*/
+    .list .results, .favorite .results, .delete .results, .searchresult .results{
+        padding: 15px;
+        height: 65vh;
+        overflow-y: auto;
+    }
+    .list h2, .favorite h2, .delete h2, .searchresult h2{
+        margin-left:10px;
+        margin-bottom:10px;
+        font-size: 20px;
+        color: #555;
+    }
+    .list .recipe-card, .favorite .recipe-card, .delete .recipe-card, .searchresult .recipe-card{
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        margin-bottom: 30px;
+        padding: 20px 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+    }
+    .list .recipe-card img, .favorite .recipe-card img, .delete .recipe-card img, .searchresult .recipe-card img{
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-right: 10px;
+        border: 1px solid #ddd;
+    }
+    .list .recipe-details, .favorite .recipe-details, .delete .recipe-details, .searchresult .recipe-details{
+        flex-grow: 1;
+    }
+    .list .recipe-details h3, .favorite .recipe-details h3, .delete .recipe-details h3, .searchresult .recipe-details h3{
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+    }
+    .list .recipe-details p, .favorite .recipe-details p, .delete .recipe-details p, .searchresult .recipe-details p{
+        margin: 5px 0;
+        font-size: 12px;
+        color: #666;
+    }
+    .list .recipe-actions, .favorite .recipe-actions, .delete .recipe-actions, .searchresult .recipe-actions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .list .recipe-actions button, .favorite .recipe-actions button, .delete .recipe-actions button, .searchresult .recipe-actions button{
+        background-color: #fff;
+        border: none;
+    }
+
+    .list .link, .favorite .link, .delete .link, .searchresult .link{
+        width: 90%;
+        text-align: right;
+    }
+    .delete .fa-trash{
+        color: #000;
+    }
+
+
+
+
+
+    /*Detail.jsp*/
+    .detail .link{
+        width: 90%;
+        text-align: right;
+    }
+    .detail .recipe-detail{
+        margin-top: 50px;
+        height: 70vh;
+        overflow-y: auto;
+    }
+    .detail .recipe-card{
+        margin-top: 10px;
+    }
+    .detail .image{
+        margin: auto;
+        width: 90%;
+        /*height: 200px;*/
+        display: flex;
+    }
+    .detail .image img{
+        width: 100%;
+        height: 20vh;
+        /*margin: 15px 10%;*/
+        border: solid 1px #ddd;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .detail button{
+        background-color: #fff;
+        border: none;
+    }
+    .detail .h3b{
+        display: flex;
+        margin: 0 5%;
+    }
+    .detail .h3b h1{
+        width: 90%;
+        /*text-align: center;*/
+        margin: 0;
+        color: #555555;
+    }
+    .detail .h3b form{
+        height: 100%;
+    }
+    .detail .h3b button{
+        width: 10%;
+        height: 100%;
+        margin-left: 10px;
+        padding: 0;
+        text-align: right;
+    }
+    .detail .ingredients, .detail .instructions{
+        text-align: center;
+        margin-top: 50px;
+        padding: 10px;
+        /*border: solid 1px #ccc;*/
+        /*border-radius: 5px;*/
+    }
+    .detail .ingredients .bold, .detail .instructions .bold{
+        font-weight: bold;
+        margin-top: 0;
+    }
+    .detail .contents{
+        text-align: left;
+        /*margin-left: 5%;*/
+        /*margin-right: 5%;*/
+        padding: 15px;
+        border: solid 1px #ccc;
+        border-radius: 5px;
+    }
+
+    /* 削除、追加ボタン */
+    .detail .p{
+        position: fixed;
+        bottom: 100px;
+        right: 10px;
+        display: flex;
+    }
+
+    .detail .p a{
+        /*margin: 10px;*/
+        /*padding: 15px;*/
+        /*border-radius: 30px;*/
+        /*background-color: #6d6;*/
+        display: inline-block;
+        width: 60px;
+        margin: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 30px;
+        background-color: #6d6;
+        text-align: center;
+    }
+
+    .detail .p i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 28px;
+        color: white;
+    }
+
+    .detail .p p{
+        text-align: center;
+        margin: 0;
+    }
+}

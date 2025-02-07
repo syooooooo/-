@@ -1,0 +1,140 @@
+body{
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+button{
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+@media screen and (min-width: 500px) {
+    /* メニューバー */
+    #sp-fixed-menu {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0;
+        font-size: 0;
+        opacity: 0.9;
+        z-index: 99;
+    }
+
+    #sp-fixed-menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 13vh; /* 高さを画面サイズに応じて調整 */
+    }
+
+    #sp-fixed-menu li {
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        background: #6a6;
+    }
+
+    #sp-fixed-menu li.active {
+        background: #4CAF50;
+        border-top: 3px solid #fff;
+    }
+
+    #sp-fixed-menu li a {
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s ease;
+    }
+
+    #sp-fixed-menu li a:hover {
+        background: #5c5;
+        color: #000;
+    }
+
+    #sp-fixed-menu li a:focus {
+        outline: none;
+        box-shadow: 0 0 5px #fff;
+    }
+
+    #sp-fixed-menu li a p {
+        margin: 10px;
+    }
+
+    #sp-fixed-menu li a i {
+        /*margin-top: 10px;*/
+        font-size: 18px; /* アイコンサイズを微調整 */
+    }
+}
+
+@media screen and (max-width: 499px) {
+    /* メニューバー */
+    #sp-fixed-menu {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0;
+        font-size: 0;
+        opacity: 0.9;
+        z-index: 99;
+    }
+
+    #sp-fixed-menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 10vh; /* 高さを画面サイズに応じて調整 */
+    }
+
+    #sp-fixed-menu li {
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        background: #6a6;
+    }
+
+    #sp-fixed-menu li.active {
+        background: #4CAF50;
+        border-top: 3px solid #fff;
+    }
+
+    #sp-fixed-menu li a {
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        transition: background 0.3s ease;
+    }
+
+    #sp-fixed-menu li a:hover {
+        background: #5c5;
+        color: #000;
+    }
+
+    #sp-fixed-menu li a:focus {
+        outline: none;
+        box-shadow: 0 0 5px #fff;
+    }
+
+    #sp-fixed-menu li a p {
+        margin: 10px;
+    }
+
+    #sp-fixed-menu li a i {
+        margin-top: 10px;
+        font-size: 18px; /* アイコンサイズを微調整 */
+    }
+}
+
