@@ -3,7 +3,7 @@ package utils;
 import java.sql.*;
 
 public class UserDAO {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/sotukenn?useSSL=false&useUnicode=true&characterEncoding=UTF-8"; // 正しいMySQLのURL
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/sotukenn?useSSL=true&useUnicode=true&characterEncoding=UTF-8"; // 正しいMySQLのURL
     private static final String USER = "root";
     private static final String PASSWD = "O-syougo0317";
 
