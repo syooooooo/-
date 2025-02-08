@@ -62,13 +62,13 @@ public class EditRecipeServlet extends HttpServlet {
         String name = request.getParameter("name");
         System.out.println("Received recipe name: " + name);
 
-        String description = request.getParameter("description");
+        String description = request.getParameter("description").replace("\r\n", "\n");
         System.out.println("Received recipe description: " + description);
 
-        String ingredients = request.getParameter("ingredients");
+        String ingredients = request.getParameter("ingredients").replace("\r\n", "\n");
         System.out.println("Received recipe ingredients: " + ingredients);
 
-        String instructions = request.getParameter("instructions");
+        String instructions = request.getParameter("instructions").replace("\r\n", "\n");
         System.out.println("Received recipe instructions: " + instructions);
 
         RecipeDAO.editRecipes(recipeId, name, description, ingredients, instructions);
