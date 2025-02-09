@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ExpenseDAO {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/sotukenn?useSSL=false&useUnicode=true&characterEncoding=UTF-8";
+    private static final String DB_URL = "jdbc:mysql://163.44.96.125:3306/sotukenn?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true";
     private static final String USER = "root";
     private static final String PASSWD = "O-syougo0317";
 

@@ -3,7 +3,7 @@ package utils;
 import java.sql.*;
 
 public class MoneyDAO {
-    private final String JDBC_URL = "jdbc:mysql://localhost:3306/sotukenn?useSSL=false&useUnicode=true&characterEncoding=UTF-8"; // 適切なURLに変更
+    private final String JDBC_URL = "jdbc:mysql://163.44.96.125:3306/sotukenn?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true"; // 適切なURLに変更
     private final String DB_USER = "root"; // データベースユーザー名
     private final String DB_PASSWORD = "O-syougo0317"; // データベースパスワード
 

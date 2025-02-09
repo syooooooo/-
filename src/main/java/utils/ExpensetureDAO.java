@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.Map;
 
 public class ExpensetureDAO {
-    private static final String URL = "jdbc:mysql://localhost:3306/sotukenn?useSSL=false&useUnicode=true&characterEncoding=UTF-8"; // データベースURL
+    private static final String URL = "jdbc:mysql://163.44.96.125:3306/sotukenn?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true"; // データベースURL
     private static final String USER = "root"; // ユーザー名
     private static final String PASSWORD = "O-syougo0317"; // パスワード
 
