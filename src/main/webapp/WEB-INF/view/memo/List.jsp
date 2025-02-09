@@ -19,24 +19,31 @@
     </div>
 
     <div class="results">
-        <c:forEach var="memo" items="${memoList}">
-            <div class="result">
-                <a href="EditMemoServlet?memoId=${memo.id}" class="title">
-                    <h3>${memo.title}</h3>
-                    <form action="DeleteMemoServlet" method="get" onsubmit="return confirm('本当に削除しますか？');">
-                        <input type="hidden" name="memoId" value="${memo.id}">
-                        <button type="submit"><i class="fa-solid fa-trash"></i></button>
-                    </form>
-                </a>
-                <p>更新日: <fmt:formatDate value="${memo.update_day}" pattern="yyyy-MM-dd HH:mm" /></p>
-            </div>
-        </c:forEach>
+        <c:choose>
+            <c:when test="${not empty memoList}">
+                <c:forEach var="memo" items="${memoList}">
+                    <div class="result">
+                        <a href="EditMemoServlet?memoId=${memo.id}" class="title">
+                            <h3>${memo.title}</h3>
+                            <form action="DeleteMemoServlet" method="get" onsubmit="return confirm('本当に削除しますか？');">
+                                <input type="hidden" name="memoId" value="${memo.id}">
+                                <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </a>
+                        <p>更新日: <fmt:formatDate value="${memo.update_day}" pattern="yyyy-MM-dd HH:mm" /></p>
+                    </div>
+                </c:forEach>
+            </c:when>
+            <c:otherwise>
+                <p>メモはありません。</p>
+            </c:otherwise>
+        </c:choose>
     </div>
 
     <div class="p">
         <div>
             <a href="CreateMemoServlet"><i class="fa-solid fa-plus"></i></a>
-<%--            <p>追加</p>--%>
+            <%--            <p>追加</p>--%>
         </div>
     </div>
 
