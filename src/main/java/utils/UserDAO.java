@@ -3,7 +3,8 @@ package utils;
 import java.sql.*;
 
 public class UserDAO {
-    private static final String DB_URL = "jdbc:mysql://163.44.96.125:3306/sotukenn?useSSL=false&useUnicode=true&characterEncoding=UTF-8"; // 正しいMySQLのURL
+    private static final String DB_URL = "jdbc:mysql://163.44.96.125:3306/sotukenn?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true";
+
     private static final String USER = "root";
     private static final String PASSWD = "O-syougo0317";
 
@@ -41,6 +42,7 @@ public class UserDAO {
         try (
                 Connection con = DriverManager.getConnection(DB_URL, "root", "O-syougo0317");
                 PreparedStatement pstmt = con.prepareStatement(sql);
+
         ) {
             pstmt.setString(1, id);
 
