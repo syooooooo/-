@@ -291,7 +291,7 @@
 
 
             .result{
-                height: 70vh;
+                height: 81vh;
                 overflow-y: auto;
             }
 

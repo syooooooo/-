@@ -162,7 +162,7 @@
     }
 
     .body{
-        margin-top: 9vh;
+        /*margin-top: 9vh;*/
     }
 
     .link{
@@ -199,11 +199,11 @@
     }
 
     .h1 h1{
-        margin-top: 10vh;
+        margin-top: 17vh;
     }
 
     .h1 .nr{
-        margin-top: 10vh;
+        margin-top: 17vh;
     }
 
     .h1 .cr{

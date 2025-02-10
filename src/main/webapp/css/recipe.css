@@ -552,7 +552,7 @@
 
 @media screen and (max-width: 499px) {
     .body{
-        margin-top: 75px;
+        /*margin-top: 75px;*/
         height: 80vh;
         /*overflow-y: auto;*/
     }
@@ -577,7 +577,7 @@
     }
 
     .h1 h1{
-        margin-top: 100px;
+        margin-top: 25vh;
     }
 
     /*戻るボタン*/
@@ -606,7 +606,7 @@
         overflow: hidden;
         border: 1px solid #888888;
         border-radius: 25px;
-        margin-top: 40%;
+        margin-top: 30%;
     }
 
     .search-form-3 input {
@@ -835,6 +835,9 @@
     .add input, .add textarea{
         /*    width: 90%;*/
     }
+    .add .head{
+        margin-bottom: 9vh;
+    }
     .add .head .back{
         width: 30px;
         /*height: 30px;*/
@@ -906,7 +909,7 @@
     /*List.jsp*/
     .list .results, .favorite .results, .delete .results, .searchresult .results{
         padding: 15px;
-        height: 65vh;
+        height: 74vh;
         overflow-y: auto;
     }
     .list h2, .favorite h2, .delete h2, .searchresult h2{
@@ -975,7 +978,7 @@
     }
     .detail .recipe-detail{
         margin-top: 50px;
-        height: 70vh;
+        height: 79vh;
         overflow-y: auto;
     }
     .detail .recipe-card{

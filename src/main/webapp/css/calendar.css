@@ -498,7 +498,7 @@
         margin: auto;
         text-align: center;
         /*font-family: Arial, sans-serif;*/
-        margin-top: 75px;
+        /*margin-top: 75px;*/
     }
 
     .calendar-wrap .calendar-header {
@@ -765,7 +765,7 @@
         margin: 8px;
     }
     .body{
-        margin-top: 10vh;
+        /*margin-top: 10vh;*/
     }
 
     .back{
@@ -792,6 +792,8 @@
 
     .ss{
         margin: 0 10px;
+        height: 71vh;
+        overflow-y: auto;
     }
 
     .ss h2{

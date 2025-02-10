@@ -420,7 +420,7 @@
 
 @media screen and (max-width: 499px) {
     .body{
-        margin-top: 75px;
+        /*margin-top: 75px;*/
     }
 
     .link{
@@ -436,7 +436,7 @@
     }
 
     .h1 h1{
-        margin-top: 100px;
+        /*margin-top: 100px;*/
     }
 
 
@@ -447,7 +447,7 @@
         display: flex;
         flex-flow: column;
         text-align: center;
-        margin-top: 75px;
+        margin-top: 10vh;
     }
 
     .list a{
@@ -709,7 +709,7 @@
     .ture .scroll-container{
         margin: 5px 10px;
         padding-bottom: 10px;
-        height: 57vh;
+        height: 69vh;
         overflow-y: auto;
     }
     .ture h3{
@@ -755,7 +755,7 @@
     /*戻るボタン*/
     .money .head {
         display: flex;
-        margin-bottom: 40%;
+        margin-bottom: 50%;
     }
 
     .money .back {
