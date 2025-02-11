@@ -594,6 +594,7 @@
         margin: 0;
         padding: 3px;
         padding-top: 0;
+        padding-bottom: 6px;
         width: 10px;
         height: 10px;
         font-size: 10px;  /* 文字サイズを調整 */
