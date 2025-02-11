@@ -407,16 +407,22 @@
                 margin-bottom: 50px;
             }
 
+            #incomePieChart, #expensePieChart{
+                display: block;  /* インライン要素の問題を避ける */
+                width: 100% !important; /* 必要であれば重要度を上げる */
+                height: 100% !important;
+            }
+
             #incomePieChart {
                 margin: auto;
-                max-width: 250px;
-                /*height: 30vw;*/
+                max-width: 300px;
+                height: 300px;
             }
 
             #expensePieChart {
                 margin: auto;
-                max-width: 250px;
-                /*height: 30vw;*/
+                max-width: 300px;
+                height: 300px;
             }
 
             #income-details, #expense-details {
@@ -474,6 +480,15 @@
             var modal = document.getElementById('graphModal');
             modal.style.display = "block";
 
+            setTimeout(function () {
+                if (window.incomePieChart) {
+                    window.incomePieChart.resize();
+                }
+                if (window.expensePieChart) {
+                    window.expensePieChart.resize();
+                }
+            }, 300);
+
             // Chart.jsでグラフを描画
             var ctx = document.getElementById('incomeExpenseChart').getContext('2d');
 
@@ -523,6 +538,9 @@
         // }
 
         var ctx = document.getElementById('incomePieChart').getContext('2d');
+        if (window.incomePieChart) {
+            window.incomePieChart.destroy();
+        }
         var incomePieChart = new Chart(ctx, {
             type: 'pie',
             data: {
@@ -579,6 +597,9 @@
         // }
 
         var expenseCtx = document.getElementById('expensePieChart').getContext('2d');
+        if (window.expensePieChart) {
+            window.expensePieChart.destroy();
+        }
         var expensePieChart = new Chart(expenseCtx, {
             type: 'pie',
             data: {
@@ -608,6 +629,16 @@
             }
         });
 
+        // リサイズ時にグラフをリサイズ
+        window.addEventListener('resize', function () {
+            if (window.incomePieChart) {
+                window.incomePieChart.resize();
+            }
+            if (window.expensePieChart) {
+                window.expensePieChart.resize();
+            }
+        });
+
         // モーダルを閉じる
         document.querySelector('.close').addEventListener('click', function () {
             var modal = document.getElementById('graphModal');
@@ -622,7 +653,6 @@
             }
         });
     </script>
-
 
     <footer>
         <div id="sp-fixed-menu" class="for-sp">
