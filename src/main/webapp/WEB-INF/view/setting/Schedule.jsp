@@ -87,29 +87,36 @@
 
 
 
-            .result{
+            .results{
                 height: 70vh;
                 overflow-y: auto;
             }
 
-            .result ul{
-                width: 90%;
-                margin: auto;
-                padding: 0;
+            .result{
+                margin: 15px;
             }
 
-            .result li{
-                width: 40%;
+            .result a{
                 display: flex;
-                margin: 30px auto;
+                width: 40%;
+                margin: auto;
                 padding: 10px;
-                list-style: none;
                 border-radius: 10px;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+                color: #000;
             }
 
-            .result div{
+            .result .contents{
                 width: 85%;
+            }
+
+            .result h3{
+                margin-top: 5px;
+            }
+
+            .result p{
+                margin: 5px;
             }
 
             .result form{
@@ -290,29 +297,37 @@
 
 
 
-            .result{
+            .results{
                 height: 81vh;
                 overflow-y: auto;
             }
 
-            .result ul{
+            .result{
+                margin: 15px;
+            }
+
+            .result a{
+                display: flex;
                 width: 90%;
                 margin: auto;
-                padding: 0;
-            }
-
-            .result li{
-                /*width: 40%;*/
-                display: flex;
-                margin: 30px auto;
                 padding: 10px;
-                list-style: none;
                 border-radius: 10px;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+                color: #000;
             }
 
-            .result div{
+            .result .contents{
                 width: 85%;
+            }
+
+            .result h3{
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+            .result p{
+                margin: 3px auto;
             }
 
             .result form{
@@ -444,37 +459,72 @@
         </button>
         <h2>ゴミ出しスケジュール</h2>
     </div>
-    <div class="result">
-        <c:if test="${not empty scheduleList}">
-            <ul>
-                <c:forEach var="schedule" items="${scheduleList}">
-                    <li>
-                        <div>
-                            <h3 style="margin: 10px 5px">${schedule.title}</h3>
-                            <p style="margin: 5px">
-                                <c:forEach var="week" items="${schedule.selectedWeeks}">
-                                    ${week}
-                                </c:forEach>
-                            </p>
-                            <p style="margin: 5px">
-                                <c:forEach var="day" items="${schedule.selectedDays}">
-                                    ${day}
-                                </c:forEach>
-                            </p>
-                        </div>
-                        <form action="DeleteScheduleServlet" method="get" onsubmit="return confirm('本当に削除しますか？');">
-                            <input type="hidden" name="gomiId" value="${schedule.id}">
-                            <button type="submit"><i class="fa-solid fa-trash"></i></button>
-                        </form>
-                    </li>
-                </c:forEach>
-            </ul>
-        </c:if>
+<%--    <div class="result">--%>
+<%--        <c:if test="${not empty scheduleList}">--%>
+<%--            <ul>--%>
+<%--                <c:forEach var="schedule" items="${scheduleList}">--%>
+<%--                    <li>--%>
+<%--                        <div>--%>
+<%--                            <h3 style="margin: 10px 5px">${schedule.title}</h3>--%>
+<%--                            <p style="margin: 5px">--%>
+<%--                                <c:forEach var="week" items="${schedule.selectedWeeks}">--%>
+<%--                                    ${week}--%>
+<%--                                </c:forEach>--%>
+<%--                            </p>--%>
+<%--                            <p style="margin: 5px">--%>
+<%--                                <c:forEach var="day" items="${schedule.selectedDays}">--%>
+<%--                                    ${day}--%>
+<%--                                </c:forEach>--%>
+<%--                            </p>--%>
+<%--                        </div>--%>
+<%--                        <form action="DeleteScheduleServlet" method="post" onsubmit="return confirm('本当に削除しますか？');">--%>
+<%--                            <input type="hidden" name="gomiId" value="${schedule.id}">--%>
+<%--                            <button type="submit"><i class="fa-solid fa-trash"></i></button>--%>
+<%--                        </form>--%>
+<%--                    </li>--%>
+<%--                </c:forEach>--%>
+<%--            </ul>--%>
+<%--        </c:if>--%>
 
-        <c:if test="${empty scheduleList}">
-            <p>スケジュールがありません。</p>
-        </c:if>
+<%--        <c:if test="${empty scheduleList}">--%>
+<%--            <p>スケジュールがありません。</p>--%>
+<%--        </c:if>--%>
+<%--    </div>--%>
+    <div class="results">
+        <c:choose>
+            <c:when test="${not empty scheduleList}">
+                <c:forEach var="schedule" items="${scheduleList}">
+                    <div class="result">
+<%--                        <a href="EditScheduleServlet?scheduleId=${schedule.id}" class="title">--%>
+                            <a href="#" class="edit-link" data-id="${schedule.id}" data-title="${schedule.title}" data-weeks="${schedule.selectedWeeks}" data-days="${schedule.selectedDays}">
+                            <div class="contents">
+                                <h3>${schedule.title}</h3>
+                                <p>
+                                    <c:forEach var="week" items="${schedule.selectedWeeks}">
+                                        ${week}
+                                    </c:forEach>
+                                </p>
+                                <p>
+                                    <c:forEach var="day" items="${schedule.selectedDays}">
+                                        ${day}
+                                    </c:forEach>
+                                </p>
+                            </div>
+
+                            <form action="DeleteScheduleServlet" method="post" onsubmit="return confirm('本当に削除しますか？');">
+                                <input type="hidden" name="scheduleId" value="${schedule.id}">
+                                <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </a>
+                    </div>
+                </c:forEach>
+            </c:when>
+            <c:otherwise>
+                <p>スケジュールがありません。</p>
+            </c:otherwise>
+        </c:choose>
     </div>
+
 
 
     <!-- モーダルを開くボタン -->
@@ -681,53 +731,107 @@
     });
 
     // 編集モーダルを開く処理
-    document.querySelectorAll('.result li').forEach(function (listItem) {
-        listItem.addEventListener('click', function (e) {
-            e.preventDefault();
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".edit-link").forEach(function (link) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault(); // ページ遷移を防ぐ
 
-            var id = this.querySelector('input[name="gomiId"]');
-            var title = this.querySelector('h3');
-            var weeks = Array.from(this.querySelectorAll('p:first-of-type span')).map(span => span.innerText.trim());
-            var days = Array.from(this.querySelectorAll('p:last-of-type span')).map(span => span.innerText.trim());
+                // スケジュールデータを取得
+                var id = this.dataset.id;
+                var title = this.dataset.title;
+                var weeks = this.dataset.weeks ? this.dataset.weeks.split(",") : [];
+                var days = this.dataset.days ? this.dataset.days.split(",") : [];
 
-            document.getElementById('editId').value = id ? id.value : '';
-            document.getElementById('editTitle').value = title ? title.innerText.trim() : '';
+                // モーダルのフォームに値をセット
+                document.getElementById("editId").value = id;
+                document.getElementById("editTitle").value = title;
 
-            // Check the appropriate radio button and show relevant checkboxes
-            if (weeks.length > 0) {
-                document.getElementById('editWeekly').checked = true;
-                document.getElementById('editWeeklyOptions').style.display = 'block';
-                document.getElementById('editWeeklyNthOptions').style.display = 'none';
-                // Check the days in weeks array
+                // チェックボックスをリセット
+                document.querySelectorAll('#editWeeklyOptions input[type="checkbox"], #editWeeklyNthOptions input[type="checkbox"]').forEach(cb => cb.checked = false);
+
+                // 曜日と週のチェックボックスをセット
                 weeks.forEach(week => {
                     var checkbox = document.querySelector(`#editWeeklyOptions input[value="${week}"]`);
-                    if (checkbox) {
-                        checkbox.checked = true;
-                    }
+                    if (checkbox) checkbox.checked = true;
                 });
-            } else if (days.length > 0) {
-                document.getElementById('editWeeklyNth').checked = true;
-                document.getElementById('editWeeklyOptions').style.display = 'none';
-                document.getElementById('editWeeklyNthOptions').style.display = 'block';
-                // Check the weeks in days array
+
                 days.forEach(day => {
                     var checkbox = document.querySelector(`#editWeeklyNthOptions input[value="${day}"]`);
-                    if (checkbox) {
-                        checkbox.checked = true;
-                    }
+                    if (checkbox) checkbox.checked = true;
                 });
-            }
-            openEditModal();
+
+                // 頻度ラジオボタンを切り替える
+                if (weeks.length > 0) {
+                    document.getElementById("editWeekly").checked = true;
+                    document.getElementById("editWeeklyOptions").style.display = 'block';
+                    document.getElementById("editWeeklyNthOptions").style.display = 'none';
+                } else if (days.length > 0) {
+                    document.getElementById("editWeeklyNth").checked = true;
+                    document.getElementById("editWeeklyOptions").style.display = 'none';
+                    document.getElementById("editWeeklyNthOptions").style.display = 'block';
+                }
+
+                // モーダルを表示
+                openEditModal();
+            });
         });
     });
 
     function openEditModal() {
-        document.getElementById('editModal').style.display = 'flex';
+        document.getElementById("editModal").style.display = "flex";
     }
 
     function closeEditModal() {
-        document.getElementById('editModal').style.display = 'none';
+        document.getElementById("editModal").style.display = "none";
     }
+
+    <%--document.querySelectorAll('.result li').forEach(function (listItem) {--%>
+    <%--    listItem.addEventListener('click', function (e) {--%>
+    <%--        e.preventDefault();--%>
+
+    <%--        var id = this.querySelector('input[name="gomiId"]');--%>
+    <%--        var title = this.querySelector('h3');--%>
+    <%--        var weeks = Array.from(this.querySelectorAll('p:first-of-type span')).map(span => span.innerText.trim());--%>
+    <%--        var days = Array.from(this.querySelectorAll('p:last-of-type span')).map(span => span.innerText.trim());--%>
+
+    <%--        document.getElementById('editId').value = id ? id.value : '';--%>
+    <%--        document.getElementById('editTitle').value = title ? title.innerText.trim() : '';--%>
+
+    <%--        // Check the appropriate radio button and show relevant checkboxes--%>
+    <%--        if (weeks.length > 0) {--%>
+    <%--            document.getElementById('editWeekly').checked = true;--%>
+    <%--            document.getElementById('editWeeklyOptions').style.display = 'block';--%>
+    <%--            document.getElementById('editWeeklyNthOptions').style.display = 'none';--%>
+    <%--            // Check the days in weeks array--%>
+    <%--            weeks.forEach(week => {--%>
+    <%--                var checkbox = document.querySelector(`#editWeeklyOptions input[value="${week}"]`);--%>
+    <%--                if (checkbox) {--%>
+    <%--                    checkbox.checked = true;--%>
+    <%--                }--%>
+    <%--            });--%>
+    <%--        } else if (days.length > 0) {--%>
+    <%--            document.getElementById('editWeeklyNth').checked = true;--%>
+    <%--            document.getElementById('editWeeklyOptions').style.display = 'none';--%>
+    <%--            document.getElementById('editWeeklyNthOptions').style.display = 'block';--%>
+    <%--            // Check the weeks in days array--%>
+    <%--            days.forEach(day => {--%>
+    <%--                var checkbox = document.querySelector(`#editWeeklyNthOptions input[value="${day}"]`);--%>
+    <%--                if (checkbox) {--%>
+    <%--                    checkbox.checked = true;--%>
+    <%--                }--%>
+    <%--            });--%>
+    <%--        }--%>
+    <%--        openEditModal();--%>
+    <%--    });--%>
+    <%--});--%>
+
+    <%--function openEditModal() {--%>
+    <%--    document.getElementById('editModal').style.display = 'flex';--%>
+    <%--}--%>
+
+    <%--function closeEditModal() {--%>
+    <%--    document.getElementById('editModal').style.display = 'none';--%>
+    <%--}--%>
 
     function toggleEditCheckboxes() {
         const isWeekly = document.getElementById('editWeekly').checked;

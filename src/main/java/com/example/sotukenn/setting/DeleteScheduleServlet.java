@@ -12,7 +12,11 @@ import utils.ScheduleDAO;
 @WebServlet("/DeleteScheduleServlet")
 public class DeleteScheduleServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        int gomiId = Integer.parseInt(request.getParameter("gomiId"));
+
+    }
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        int gomiId = Integer.parseInt(request.getParameter("scheduleId"));
         try {
             ScheduleDAO.deleteSchedule(gomiId);
             response.sendRedirect("ScheduleServlet");  // メモ一覧画面へリダイレクト
