@@ -16,7 +16,7 @@ public class DeleteScheduleServlet extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        int gomiId = Integer.parseInt(request.getParameter("scheduleId"));
+        int gomiId = Integer.parseInt(request.getParameter("id"));
         try {
             ScheduleDAO.deleteSchedule(gomiId);
             response.sendRedirect("ScheduleServlet");  // メモ一覧画面へリダイレクト

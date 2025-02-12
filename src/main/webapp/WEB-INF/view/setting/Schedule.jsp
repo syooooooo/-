@@ -303,16 +303,20 @@
             }
 
             .result{
-                margin: 15px;
-            }
-
-            .result a{
                 display: flex;
-                width: 90%;
-                margin: auto;
+                margin: 15px;
                 padding: 10px;
                 border-radius: 10px;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .result a{
+                /*display: flex;*/
+                width: 90%;
+                margin: auto;
+                padding: 5px;
+                /*border-radius: 10px;*/
+                /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
                 text-decoration: none;
                 color: #000;
             }
@@ -331,10 +335,11 @@
             }
 
             .result form{
-                width: 10%;
+                width: 15%;
                 margin: 0;
-                margin-left: 5%;
+                /*margin-right: 5%;*/
                 align-self: center;
+                text-align: right;
             }
             .result button{
                 padding: 10px;
@@ -510,12 +515,11 @@
                                     </c:forEach>
                                 </p>
                             </div>
-
-                            <form action="DeleteScheduleServlet" method="post" onsubmit="return confirm('本当に削除しますか？');">
-                                <input type="hidden" name="scheduleId" value="${schedule.id}">
-                                <button type="submit"><i class="fa-solid fa-trash"></i></button>
-                            </form>
                         </a>
+    <form action="DeleteScheduleServlet" method="post" onsubmit="return confirm('本当に削除しますか？');">
+        <input type="hidden" name="id" value="${schedule.id}">
+        <button type="submit"><i class="fa-solid fa-trash"></i></button>
+    </form>
                     </div>
                 </c:forEach>
             </c:when>
