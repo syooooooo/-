@@ -22,7 +22,7 @@
   </div>
   <form class="memoEdit" action="CreateMemoServlet" method="POST">
     <textarea name="title" rows="1" cols="40" placeholder="タイトルを入力"></textarea><br>
-    <textarea name="content" rows="10" cols="40" placeholder="テキストを入力"></textarea><br>
+    <textarea name="content" rows="20" cols="40" placeholder="テキストを入力"></textarea><br>
     <div class="save">
       <button type="submit">保存</button>
     </div>

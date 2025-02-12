@@ -18,13 +18,13 @@
             <i class="fa-solid fa-circle-left"></i>
         </button>
         <div class="h2">
-            <h2>メモを編集</h2>
+<%--            <h2>メモを編集</h2>--%>
         </div>
     </div>
 
     <form class="memoEdit" action="EditMemoServlet" method="POST">
         <textarea name="title" rows="1" cols="40">${memo.title}</textarea><br>
-        <textarea name="text" rows="10" cols="40">${memo.text}</textarea><br>
+        <textarea name="text" rows="20" cols="40">${memo.text}</textarea><br>
         <input type="hidden" name="memoId" value="${memo.id}">
         <div class="save">
             <button type="submit">保存</button>
