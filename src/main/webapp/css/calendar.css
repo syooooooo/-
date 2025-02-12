@@ -863,6 +863,16 @@
         background-color: #ffebee;
     }
 
+    .ss .income button{
+        background-color: #e1f5fe;
+        border: none;
+    }
+
+    .ss .expense button{
+        background-color: #ffebee;
+        border: none;
+    }
+
     /* 追加ボタン */
     .p{
         position: fixed;
