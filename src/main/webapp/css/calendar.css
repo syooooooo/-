@@ -855,6 +855,14 @@
         color: #551a8b;
     }
 
+    .ss .income td{
+        background-color: #e1f5fe;
+    }
+
+    .ss .expense td{
+        background-color: #ffebee;
+    }
+
     /* 追加ボタン */
     .p{
         position: fixed;
