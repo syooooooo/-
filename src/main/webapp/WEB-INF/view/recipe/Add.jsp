@@ -35,7 +35,7 @@
 
     <div class="form-group">
       <label for="name">レシピ名 <span style="color: red;">*</span></label>
-      <input type="text" id="name" name="name" placeholder="例: カレーライス">
+      <input type="text" id="name" name="name" placeholder="例: カレーライス" required>
     </div>
     <div class="form-group">
       <label for="description">説明</label>

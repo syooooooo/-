@@ -866,6 +866,29 @@
         document.getElementById('editModal').style.display = 'none';
     }
 
+    // フォームの送信前にチェックする
+    document.getElementById('scheduleForm').addEventListener('submit', function(event) {
+        const isWeekly = document.getElementById('weekly').checked;
+        const weekCheckboxes = document.querySelectorAll('input[name="weeks"]:checked');
+        const weekdayCheckboxes = document.querySelectorAll('input[name="weekdays"]:checked');
+
+        if (!isWeekly && weekCheckboxes.length === 0 && weekdayCheckboxes.length === 0) {
+            alert('少なくとも1つの「週」または「曜日」を選択してください。');
+            event.preventDefault(); // 送信をキャンセル
+        }
+    });
+
+    document.getElementById('editScheduleForm').addEventListener('submit', function(event) {
+        const isWeekly = document.getElementById('editWeekly').checked;
+        const weekCheckboxes = document.querySelectorAll('#editWeeklyOptions input[name="weeks"]:checked');
+        const weekdayCheckboxes = document.querySelectorAll('#editWeeklyNthOptions input[name="weekdays"]:checked');
+
+        if (!isWeekly && weekCheckboxes.length === 0 && weekdayCheckboxes.length === 0) {
+            alert('少なくとも1つの「週」または「曜日」を選択してください。');
+            event.preventDefault(); // 送信をキャンセル
+        }
+    });
+
 </script>
 
 <footer>

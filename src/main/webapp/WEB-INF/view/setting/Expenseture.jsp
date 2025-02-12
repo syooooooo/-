@@ -18,7 +18,7 @@
 <body class="ture">
 <div class="body">
     <div class="head">
-        <button class="back" type="button" onclick="history.back()">
+        <button class="back" type="button" onclick="location.href='SettingServlet'">
             <i class="fa-solid fa-circle-left"></i>
         </button>
         <h2>定期支出</h2>
