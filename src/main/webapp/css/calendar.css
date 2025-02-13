@@ -505,7 +505,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 30px;
+        /*margin-bottom: 30px;*/
     }
 
     .calendar-wrap .calendar-header .selectbox {
@@ -548,7 +548,7 @@
 
     .calendar-wrap .calendar td {
         width: 50px;
-        height: 60px;
+        height: 55px;
         padding: 0;
     }
 
@@ -647,7 +647,7 @@
         margin: 15px;
     }
     .syuusi div{
-        width: 33%;
+        width: 25%;
     }
     .syuusi div h4, .syuusi div p{
         margin: 5px;
@@ -659,7 +659,7 @@
     /* グラフ、ゴミの日ボタン */
     .gg{
         position: fixed;
-        bottom: 100px;
+        bottom: 75px;
         right: 10px;
         display: flex;
     }
@@ -784,7 +784,7 @@
     }
     .kakeibo #dateForm{
         text-align: center;
-        margin: 50px;
+        /*margin: 50px;*/
     }
     .kakeibo #dateForm button{
         background-color: #fff;
@@ -793,7 +793,7 @@
 
     .ss{
         margin: 0 10px;
-        height: 71vh;
+        height: 75vh;
         overflow-y: auto;
     }
 
@@ -876,7 +876,7 @@
     /* 追加ボタン */
     .p{
         position: fixed;
-        bottom: 100px;
+        bottom: 75px;
         right: 10px;
         display: flex;
     }

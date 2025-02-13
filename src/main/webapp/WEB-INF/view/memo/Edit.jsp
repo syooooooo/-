@@ -23,8 +23,8 @@
     </div>
 
     <form class="memoEdit" action="EditMemoServlet" method="POST">
-        <textarea name="title" rows="1" cols="40">${memo.title}</textarea><br>
-        <textarea name="text" rows="20" cols="40">${memo.text}</textarea><br>
+        <textarea name="title" rows="1" cols="30">${memo.title}</textarea><br>
+        <textarea name="text" rows="20" cols="30">${memo.text}</textarea><br>
         <input type="hidden" name="memoId" value="${memo.id}">
         <div class="save">
             <button type="submit">保存</button>

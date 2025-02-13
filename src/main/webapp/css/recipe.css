@@ -606,11 +606,11 @@
         overflow: hidden;
         border: 1px solid #888888;
         border-radius: 25px;
-        margin-top: 30%;
+        margin-top: 15%;
     }
 
     .search-form-3 input {
-        width: 320px;
+        width: 75vw;
         height: 45px;
         padding: 5px 15px;
         border: none;
@@ -671,7 +671,7 @@
     /* 削除、追加ボタン */
     .pm{
         position: fixed;
-        bottom: 100px;
+        bottom: 75px;
         right: 10px;
         display: flex;
     }
@@ -786,6 +786,7 @@
     }
     .add label {
         font-weight: bold;
+        margin-bottom: 0;
     }
     .add .file-placeholder{
         font-weight: unset;
@@ -836,7 +837,7 @@
         /*    width: 90%;*/
     }
     .add .head{
-        margin-bottom: 9vh;
+        margin-bottom: 5vh;
     }
     .add .head .back{
         width: 30px;
@@ -909,7 +910,7 @@
     /*List.jsp*/
     .list .results, .favorite .results, .delete .results, .searchresult .results{
         padding: 15px;
-        height: 74vh;
+        height: 65vh;
         overflow-y: auto;
     }
     .list h2, .favorite h2, .delete h2, .searchresult h2{
@@ -978,7 +979,7 @@
     }
     .detail .recipe-detail{
         margin-top: 50px;
-        height: 79vh;
+        height: 70vh;
         overflow-y: auto;
     }
     .detail .recipe-card{
@@ -1045,7 +1046,7 @@
     /* 削除、追加ボタン */
     .detail .p{
         position: fixed;
-        bottom: 100px;
+        bottom: 75px;
         right: 10px;
         display: flex;
     }

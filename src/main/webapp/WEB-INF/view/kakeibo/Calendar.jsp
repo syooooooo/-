@@ -180,10 +180,10 @@
             <a href="javascript:void(0)"><i class="fa-solid fa-chart-simple"></i></a>
 <%--            <p>グラフ</p>--%>
         </div>
-        <div>
-            <a href="ScheduleServlet"><i class="fa-solid fa-sack-xmark"></i></a>
-<%--            <p>ゴミの日</p>--%>
-        </div>
+<%--        <div>--%>
+<%--            <a href="ScheduleServlet"><i class="fa-solid fa-sack-xmark"></i></a>--%>
+<%--&lt;%&ndash;            <p>ゴミの日</p>&ndash;%&gt;--%>
+<%--        </div>--%>
     </div>
 
 

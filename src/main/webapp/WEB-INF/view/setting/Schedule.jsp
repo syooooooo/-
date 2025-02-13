@@ -298,7 +298,7 @@
 
 
             .results{
-                height: 81vh;
+                height: 73vh;
                 overflow-y: auto;
             }
 
@@ -464,44 +464,44 @@
         </button>
         <h2>ゴミ出しスケジュール</h2>
     </div>
-<%--    <div class="result">--%>
-<%--        <c:if test="${not empty scheduleList}">--%>
-<%--            <ul>--%>
-<%--                <c:forEach var="schedule" items="${scheduleList}">--%>
-<%--                    <li>--%>
-<%--                        <div>--%>
-<%--                            <h3 style="margin: 10px 5px">${schedule.title}</h3>--%>
-<%--                            <p style="margin: 5px">--%>
-<%--                                <c:forEach var="week" items="${schedule.selectedWeeks}">--%>
-<%--                                    ${week}--%>
-<%--                                </c:forEach>--%>
-<%--                            </p>--%>
-<%--                            <p style="margin: 5px">--%>
-<%--                                <c:forEach var="day" items="${schedule.selectedDays}">--%>
-<%--                                    ${day}--%>
-<%--                                </c:forEach>--%>
-<%--                            </p>--%>
-<%--                        </div>--%>
-<%--                        <form action="DeleteScheduleServlet" method="post" onsubmit="return confirm('本当に削除しますか？');">--%>
-<%--                            <input type="hidden" name="gomiId" value="${schedule.id}">--%>
-<%--                            <button type="submit"><i class="fa-solid fa-trash"></i></button>--%>
-<%--                        </form>--%>
-<%--                    </li>--%>
-<%--                </c:forEach>--%>
-<%--            </ul>--%>
-<%--        </c:if>--%>
+    <%--    <div class="result">--%>
+    <%--        <c:if test="${not empty scheduleList}">--%>
+    <%--            <ul>--%>
+    <%--                <c:forEach var="schedule" items="${scheduleList}">--%>
+    <%--                    <li>--%>
+    <%--                        <div>--%>
+    <%--                            <h3 style="margin: 10px 5px">${schedule.title}</h3>--%>
+    <%--                            <p style="margin: 5px">--%>
+    <%--                                <c:forEach var="week" items="${schedule.selectedWeeks}">--%>
+    <%--                                    ${week}--%>
+    <%--                                </c:forEach>--%>
+    <%--                            </p>--%>
+    <%--                            <p style="margin: 5px">--%>
+    <%--                                <c:forEach var="day" items="${schedule.selectedDays}">--%>
+    <%--                                    ${day}--%>
+    <%--                                </c:forEach>--%>
+    <%--                            </p>--%>
+    <%--                        </div>--%>
+    <%--                        <form action="DeleteScheduleServlet" method="post" onsubmit="return confirm('本当に削除しますか？');">--%>
+    <%--                            <input type="hidden" name="gomiId" value="${schedule.id}">--%>
+    <%--                            <button type="submit"><i class="fa-solid fa-trash"></i></button>--%>
+    <%--                        </form>--%>
+    <%--                    </li>--%>
+    <%--                </c:forEach>--%>
+    <%--            </ul>--%>
+    <%--        </c:if>--%>
 
-<%--        <c:if test="${empty scheduleList}">--%>
-<%--            <p>スケジュールがありません。</p>--%>
-<%--        </c:if>--%>
-<%--    </div>--%>
+    <%--        <c:if test="${empty scheduleList}">--%>
+    <%--            <p>スケジュールがありません。</p>--%>
+    <%--        </c:if>--%>
+    <%--    </div>--%>
     <div class="results">
         <c:choose>
             <c:when test="${not empty scheduleList}">
                 <c:forEach var="schedule" items="${scheduleList}">
                     <div class="result">
-<%--                        <a href="EditScheduleServlet?scheduleId=${schedule.id}" class="title">--%>
-                            <a href="#" class="edit-link" data-id="${schedule.id}" data-title="${schedule.title}" data-weeks="${schedule.selectedWeeks}" data-days="${schedule.selectedDays}">
+                            <%--                        <a href="EditScheduleServlet?scheduleId=${schedule.id}" class="title">--%>
+                        <a href="#" class="edit-link" data-id="${schedule.id}" data-title="${schedule.title}" data-weeks="${schedule.selectedWeeks}" data-days="${schedule.selectedDays}">
                             <div class="contents">
                                 <h3>${schedule.title}</h3>
                                 <p>
@@ -516,10 +516,10 @@
                                 </p>
                             </div>
                         </a>
-    <form action="DeleteScheduleServlet" method="post" onsubmit="return confirm('本当に削除しますか？');">
-        <input type="hidden" name="id" value="${schedule.id}">
-        <button type="submit"><i class="fa-solid fa-trash"></i></button>
-    </form>
+                        <form action="DeleteScheduleServlet" method="post" onsubmit="return confirm('本当に削除しますか？');">
+                            <input type="hidden" name="id" value="${schedule.id}">
+                            <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                        </form>
                     </div>
                 </c:forEach>
             </c:when>
@@ -537,10 +537,10 @@
             <a href="#" class="open-modal-link" onclick="openModal(); return false;">
                 <i class="fa-solid fa-plus"></i>
             </a>
-        <%--            <p>追加</p>--%>
+            <%--            <p>追加</p>--%>
         </div>
     </div>
-<%--    <button class="open-modal-btn" onclick="openModal()">スケジュールを登録する</button>--%>
+    <%--    <button class="open-modal-btn" onclick="openModal()">スケジュールを登録する</button>--%>
 
     <!-- 登録モーダル -->
     <div id="modal" class="modal" style="display: none;" onclick="closeModalOnOutsideClick(event)">

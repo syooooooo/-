@@ -30,13 +30,13 @@
         <div class="register">
             <div>
                 <p>ID</p>
-                <input type="text" name="id" size="30" required>
+                <input type="text" name="id" size="20" required>
                 <p>名前</p>
-                <input type="text" name="name" size="30" required>
+                <input type="text" name="name" size="20" required>
                 <p>パスワード</p>
-                <input type="password" name="password" size="30" required>
+                <input type="password" name="password" size="20" required>
                 <p>パスワード（確認）</p>
-                <input type="password" name="confirmPassword" size="30" required>
+                <input type="password" name="confirmPassword" size="20" required>
             </div>
         </div>
 

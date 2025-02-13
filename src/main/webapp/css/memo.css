@@ -337,7 +337,7 @@
 
     .h1 h1{
         /*margin-top: 100px;*/
-        margin-bottom: 50px;
+        /*margin-bottom: 50px;*/
     }
 
     .head {
@@ -399,7 +399,7 @@
     /* 削除、追加ボタン */
     .p{
         position: fixed;
-        bottom: 100px;
+        bottom: 75px;
         right: 10px;
         display: flex;
     }
@@ -568,7 +568,7 @@
     /*}*/
     /*list.jsp*/
     .list .results{
-        height: 76vh;
+        height: 70vh;
         overflow-y: auto;
     }
     .list .result{

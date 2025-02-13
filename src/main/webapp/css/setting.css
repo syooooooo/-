@@ -538,7 +538,7 @@
     /* 削除、追加ボタン */
     .p{
         position: fixed;
-        bottom: 100px;
+        bottom: 75px;
         right: 10px;
         display: flex;
     }
@@ -709,7 +709,7 @@
     .ture .scroll-container{
         margin: 5px 10px;
         padding-bottom: 10px;
-        height: 69vh;
+        height: 55vh;
         overflow-y: auto;
     }
     .ture h3{
@@ -737,7 +737,7 @@
         border: none;
     }
     .ture .g{
-        width: 21%
+        width: 23%
     }
     .ture .t{
         width: 36%
@@ -755,7 +755,7 @@
     /*戻るボタン*/
     .money .head {
         display: flex;
-        margin-bottom: 50%;
+        margin-bottom: 30%;
     }
 
     .money .back {

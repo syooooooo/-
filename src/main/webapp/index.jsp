@@ -27,9 +27,9 @@
     <div class="login">
       <div>
         <p>ID</p>
-        <input class="id" type="text" name="id" size="30" required>
+        <input class="id" type="text" name="id" size="20" required>
         <p>パスワード</p>
-        <input class="password" type="password" name="password" size="30" required>
+        <input class="password" type="password" name="password" size="20" required>
       </div>
     </div>
 
