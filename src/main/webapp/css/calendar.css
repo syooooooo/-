@@ -820,7 +820,7 @@
     }
 
     .ss .category{
-        width: 21%;
+        width: 23%;
     }
 
     .ss .title{
@@ -925,7 +925,7 @@
     /* モーダルコンテンツ */
     .modal-content {
         background-color: #fefefe;
-        margin: 50% auto;
+        margin: 25% auto;
         padding: 20px;
         border: 1px solid #888;
         width: 80%;

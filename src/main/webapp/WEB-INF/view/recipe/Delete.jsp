@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="h2">
-        <h2>削除したいレシピを選択してください</h2>
+        <h2>削除するレシピを選択してください</h2>
     </div>
     <div class="results">
 
