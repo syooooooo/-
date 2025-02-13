@@ -568,7 +568,7 @@
     /*}*/
     /*list.jsp*/
     .list .results{
-        height: 70vh;
+        height: 68vh;
         overflow-y: auto;
     }
     .list .result{
@@ -615,7 +615,7 @@
 
     /*Edit.jsp, Create.jsp*/
     .memoEdit{
-        margin: 30px;
+        /*margin: 30px;*/
         text-align: center;
     }
     .memoEdit textarea{

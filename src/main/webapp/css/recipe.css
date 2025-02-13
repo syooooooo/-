@@ -910,7 +910,7 @@
     /*List.jsp*/
     .list .results, .favorite .results, .delete .results, .searchresult .results{
         padding: 15px;
-        height: 60vh;
+        height: 62vh;
         overflow-y: auto;
     }
     .list h2, .favorite h2, .delete h2, .searchresult h2{
